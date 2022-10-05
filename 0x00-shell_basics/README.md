@@ -10,3 +10,4 @@
 changes the working directory to the previous one
 11-lists displays files in /boot
 12-file_type  prints the type of the file named iamafile
+13-symbolic_link  link to /bin/ls, named __ls__ in current directory 
