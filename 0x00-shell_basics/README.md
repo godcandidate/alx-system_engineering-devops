@@ -5,3 +5,4 @@
 4-listmorefiles displays current directory contents, including hidden files
 5-listfilesdigitonly displays current directory contents with Long format, with user and group IDs displayed numerically and And hidden files
 7-movethatfile Move the file betty from /tmp/ to /tmp/my_first_directory
+8-firstdelete deletes  betty is in /tmp/my_first_directory
