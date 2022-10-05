@@ -8,3 +8,4 @@
 8-firstdelete deletes  betty is in /tmp/my_first_directory
 9-firstdirdeletion deletes the directory my_first_directory that is in the /tmp directory
 changes the working directory to the previous one
+11-lists displays files in /boot
