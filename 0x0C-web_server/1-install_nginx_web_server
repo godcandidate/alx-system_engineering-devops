@@ -25,3 +25,6 @@ echo "server {
 
 # restart nginx
 nginx -s reload
+
+# output
+echo '["Hello World!"]'
