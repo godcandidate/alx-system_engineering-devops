@@ -9,7 +9,7 @@ sudo apt-get install -y nginx
 mkdir /etc/nginx/html
 
 # create sample page
-echo "Hello World!" > /etc/nginx/html/index.hmtl
+echo "Hello World!" > /etc/nginx/html/index.html
 
 # create server block files
 echo "server {
