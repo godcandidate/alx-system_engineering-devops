@@ -1,20 +1,11 @@
 #!/usr/bin/env bash
-#Configure your Nginx server to have a custom 404 page that contains the string
+# returns a custom header on request
 
-# install nginx
-sudo apt-get update
-sudo apt install nginx -y
+sudo apt-get -y update
+sudo apt-get -y install nginx
 
-# configure pages
-sudo chown -R ubuntu /var/www/html
-echo "Esto no es una pagina" > /var/www/html/404.html
-echo "Hello World" > /var/www/html/index.html
+sudo sed -i "47i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+echo "Hello World!" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 
-replace="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=snehh-hXoY8;\n\t}\n"
-replace2="\n\terror_page 404 /404.html;\n\tlocation = /var/www/html/404.html {\n\t\tinternal;\n\t}"
-replace3="\n\tadd_header X-Served-By $hostname;"
-
-# http new header response
-sudo sed -i "47i\ $replace3$replace$replace2" /etc/nginx/sites-available/default
-sudo service nginx restart
-sudo service nginx reload
+sudo service nginx start
